@@ -29,13 +29,13 @@ class AtoresController extends Controller
         $novo_ator = $request->all();
         Ator::create($novo_ator);
 
-        return redirect('atores');
+        return redirect()->route('atores');
     }
 
     public function destroy($id)
     {
         Ator::find($id)->delete();
-        return redirect('atores');
+        return redirect()->route('atores');
     }
 
     public function edit($id)
@@ -47,6 +47,6 @@ class AtoresController extends Controller
     public function update(AtorRequest $request, $id)
     {
         Ator::find($id)->update($request->all());
-        return redirect('atores');
+        return redirect()->route('atores');
     }
 }

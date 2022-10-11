@@ -30,5 +30,4 @@ Route::group(['prefix' => 'atores', 'where' => ['id' => '[0-9]+']], function() {
     Route::get('{id}/edit',       ['as'=>'atores.edit',            'uses'=>'\App\Http\Controllers\AtoresController@edit']);
     Route::put('{id}/update',     ['as'=>'atores.update',            'uses'=>'\App\Http\Controllers\AtoresController@update']);
     Route::post('store',          ['as'=>'atores.store',            'uses'=>'\App\Http\Controllers\AtoresController@store']);
-
-}
+});
