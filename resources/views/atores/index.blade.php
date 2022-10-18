@@ -17,7 +17,8 @@
                 <tr>
                     <td>{{ $ator->nome }}</td>
                     <td>{{ Carbon\Carbon::parse($ator->dt_nascimento)->format('d/m/Y') }}</td>
-                    <td>{{ $ator->nacionalidade }}</td>
+                    <td>{{ isset($ator->nacionalidade->descricao) ? $ator->nacionalidade->descricao : 'Nacionalidade não informada' }}
+                    </td>
                     <td>{{ Carbon\Carbon::parse($ator->inicio_atividades)->format('d/m/Y') }}</td>
                     <td><a href="{{ route('atores.edit', ['id' => $ator->id]) }}" class="btn-sm btn-success">Editar</a>
                         <a href="#" onclick="return ConfirmaExclusao({{ $ator->id }})"
@@ -28,6 +29,8 @@
             @endforeach
         </tbody>
     </table>
+
+    {{ $atores->links('pagination::bootstrap-4') }}
     <a href="{{ route('atores.create', []) }}" class="btn btn-info">Adicionar</a>
 @stop
 

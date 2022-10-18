@@ -291,12 +291,17 @@ return [
 
     'menu' => [
         // Navbar items:
-       ['header' => 'ATORES'],
-       [
-        'text' => 'Listagem',
-        'url' => 'http://127.0.0.1:8000/atores',
-        'icon' => 'fas fa-fw fa-users',
-       ],
+        ['header' => 'ATORES'],
+        [
+            'text' => 'Listagem',
+            'url' => 'http://127.0.0.1:8000/atores',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Nacionalidades',
+            'url' => 'http://127.0.0.1:8000/nacionalidades',
+            'icon' => 'fas fa-fw fa-flag',
+        ],
     ],
 
     /*
